@@ -7,4 +7,5 @@ const HelloWorld = () => {
     </div>
   )
 }
+
 export default HelloWorld
