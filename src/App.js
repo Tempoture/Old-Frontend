@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'reset-css/reset.css';
+import Navbar from "./components/Navbar/Navbar";
 import './App.css';
 import queryString from 'query-string';
 
@@ -15,7 +16,33 @@ let counterStyle = {
   'font-size': '20px',
   'line-height': '30px'
 }
+const loginButtonSection = {
+  position: 'absolute',
+  width: '354px',
+  height: '52px',
+  left: '800px',
+  top: '607px',
+  justifyContent: 'center',
+  alignItems: 'center',
+  color:"white", 
+  'font_family': 'Arial',
+  'font_style': 'normal',
+  'font-weight': 'bold',
+  'font-size': '26px',
+  'line-height': '41px',
+  color: '#FFFFFF',
+  'border-radius': '138.21px',
+  background: 'Transparent'
+};
+let wordStyles = {
+  'font-family': 'Papyrus',
+  'font-style': 'italic',
+  'font-weight': 'normal',
+  'font-size': '110px',
+  'line-height': '130px',
 
+  color: '#000000'
+}
 function isEven(number) {
   return number % 2
 }
@@ -171,6 +198,21 @@ class App extends Component {
         }) : []
     return (
       <div className="App">
+        <Navbar />
+        <p style={{
+          ...wordStyles,
+          position: 'absolute',
+          width: '961px',
+          height: '218px',
+          left: '800px',
+          top: '297px',}}> Music</p>
+        <p style={{
+          ...wordStyles, 
+          position: 'absolute',
+          width: '961px',
+          height: '218px',
+          left: '580px',
+          top: '400px',}}>for your Weather</p>
         {this.state.user ?
           <div>
             <h1 style={{
@@ -194,7 +236,7 @@ class App extends Component {
               : 'https://frontendtempoture.herokuapp.com/login'
           }
           }
-            style={{ padding: '20px', 'font-size': '50px', 'margin-top': '20px' }}>Sign in with Spotify</button>
+          style={{...loginButtonSection}}>CONNECT SPOTIFY</button>
         }
       </div>
     );
