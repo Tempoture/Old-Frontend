@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems"
 import './Navbar.css'
 
+const logo = "tempoture_logo_white_frame.png";
 class Navbar extends Component {
     state = { clicked: false }
 
@@ -13,6 +14,7 @@ class Navbar extends Component {
         return(
             <nav className="NavbarItems">
                 <h1 className="navbar-logo">
+                    <img src = {logo}></img>
                     Tempoture
                     </h1>
                 
