@@ -184,6 +184,10 @@ class App extends Component {
         })
       }))
 
+      fetch('https://api.spotify.com/v1/me/player/recently-played',{
+            headers: { 'Authorization': 'Bearer ' + accessToken }
+      }).then(response => response.json())
+
   }
   render() {
     let playlistToRender =
